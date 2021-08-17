@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "262232829768",
+    "firebase_url": "https://seldy-9677e-default-rtdb.firebaseio.com",
+    "project_id": "seldy-9677e",
+    "storage_bucket": "seldy-9677e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262232829768:android:8092199b7ac3794f100d7d",
+        "android_client_info": {
+          "package_name": "com.seldy_proj.seldy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262232829768-4420oet2o55b8ior7o8d6ukccbu484mn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.seldy_proj.seldy",
+            "certificate_hash": "8ea51dea357cc905f28dbca0721e0b30e4106b93"
+          }
+        },
+        {
+          "client_id": "262232829768-qv51q4lqfqu0ngvgs3vlhqba3ic7ugvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHx3VIRoz2RTZVyh372Cc-W142Ee3zmwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "262232829768-qv51q4lqfqu0ngvgs3vlhqba3ic7ugvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

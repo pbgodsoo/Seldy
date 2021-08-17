@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/showId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hi"
+        android:textSize="50dp"
+        android:textColor="#484848"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:id="@+id/signout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="로그아웃"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="프로필" />
+
+        <Button
+            android:id="@+id/btn_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="친구관리" />
+
+        <Button
+            android:id="@+id/btn_inquiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="문의" />
+
+        <Button
+            android:id="@+id/btn_appver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="앱버전" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/seldy2"
+        android:text="팝업" />
+
+</LinearLayout>
