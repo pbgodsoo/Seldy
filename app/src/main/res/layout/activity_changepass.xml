@@ -90,7 +90,7 @@
                 android:inputType="textPassword" />
 
             <ImageButton
-                android:id="@+id/btn_back"
+                android:id="@+id/btn_pan1"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_gravity="right"

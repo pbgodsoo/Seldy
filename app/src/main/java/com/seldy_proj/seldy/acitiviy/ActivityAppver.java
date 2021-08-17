@@ -15,7 +15,7 @@ public class ActivityAppver extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appver);
 
-        ImageButton button = (ImageButton) findViewById(R.id.btn_back);
+        ImageButton button = (ImageButton) findViewById(R.id.btn_pan1);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

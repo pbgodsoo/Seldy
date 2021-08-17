@@ -32,27 +32,39 @@
 
         <Button
             android:id="@+id/btn_pro"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="프로필" />
+            android:text="프로필"
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/btn_friends"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="친구관리" />
+            android:text="친구관리"
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/btn_inquiry"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="문의" />
+            android:text="문의"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_pass"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="PW변경"
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/btn_appver"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="앱버전" />
+            android:text="앱버전"
+            android:textSize="12sp" />
+
     </LinearLayout>
 
     <Button

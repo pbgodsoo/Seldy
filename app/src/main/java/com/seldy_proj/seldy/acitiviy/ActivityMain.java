@@ -48,6 +48,7 @@ public class ActivityMain extends AppCompatActivity {
         Button imageButton2 = (Button) findViewById(R.id.btn_friends);
         Button imageButton3 = (Button) findViewById(R.id.btn_inquiry);
         Button imageButton4 = (Button) findViewById(R.id.btn_appver);
+        Button imageButton5 = (Button) findViewById(R.id.btn_pass);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
 
@@ -85,6 +86,15 @@ public class ActivityMain extends AppCompatActivity {
             }
         });
 
+        imageButton5.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ActivityChangePass.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
 

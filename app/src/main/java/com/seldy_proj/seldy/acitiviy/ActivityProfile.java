@@ -38,7 +38,7 @@ public class ActivityProfile extends AppCompatActivity {
             }
         });
 
-        ImageButton button = (ImageButton) findViewById(R.id.btn_back);
+        ImageButton button = (ImageButton) findViewById(R.id.btn_pan1);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -27,6 +27,7 @@
         <activity android:name="com.seldy_proj.seldy.acitiviy.ActivityProfile"/>
         <activity android:name="com.seldy_proj.seldy.acitiviy.ActivityInquiry"/>
         <activity android:name="com.seldy_proj.seldy.acitiviy.ActivityAppver"/>
+        <activity android:name="com.seldy_proj.seldy.acitiviy.ActivityChangePass"/>
     </application>
 
 </manifest>

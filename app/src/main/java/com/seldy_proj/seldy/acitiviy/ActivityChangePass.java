@@ -9,11 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.seldy_proj.seldy.R;
 
-public class ActivityFriends extends AppCompatActivity {
+public class ActivityChangePass extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_friends);
+        setContentView(R.layout.activity_changepass);
 
         ImageButton button = (ImageButton) findViewById(R.id.btn_pan1);
 
