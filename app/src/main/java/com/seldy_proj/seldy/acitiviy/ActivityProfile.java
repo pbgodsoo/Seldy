@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -23,7 +24,7 @@ public class ActivityProfile extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_profile);
 
         imageView = findViewById(R.id.imageView5);
 
@@ -37,8 +38,17 @@ public class ActivityProfile extends AppCompatActivity {
             }
         });
 
+        ImageButton button = (ImageButton) findViewById(R.id.btn_back);
 
-        setContentView(R.layout.activity_profile);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                onBackPressed();
+            }
+        });
+
+
     }
 
     @Override

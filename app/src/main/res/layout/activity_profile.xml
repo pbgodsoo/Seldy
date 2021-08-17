@@ -14,7 +14,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/btn_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
@@ -57,7 +57,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            app:srcCompat="@drawable/f2" />
+            app:srcCompat="@drawable/f2_m2" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -133,7 +133,8 @@
                     android:backgroundTint="@color/seldy3"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="jisu diary" />
+                    android:text="jisu diary"
+                    android:textColor="#000000" />
 
                 <ImageButton
                     android:id="@+id/imageButton2"
@@ -166,7 +167,8 @@
                     android:backgroundTint="@color/seldy3"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="한번씩 끄적이는 곳" />
+                    android:text="한번씩 끄적이는 곳"
+                    android:textColor="#000000" />
 
                 <ImageButton
                     android:id="@+id/imageButton4"
@@ -199,7 +201,8 @@
                     android:backgroundTint="@color/seldy3"
                     android:ems="10"
                     android:inputType="textEmailAddress"
-                    android:text="green3432@gmail.com" />
+                    android:text="green3432@gmail.com"
+                    android:textColor="#000000" />
 
                 <ImageButton
                     android:id="@+id/imageButton5"
