@@ -100,54 +100,30 @@ public class ActivityChangePass extends AppCompatActivity {
                 String getUserPw = pw.getText().toString();
                 String getUserPwc = pwc.getText().toString();
 
-                if (getUserPw.equals("") != true && getUserPwc.equals("") != true) {
-                    if (pw_c != true || pwc_c != true) {
-                        Toast.makeText(ActivityChangePass.this, "비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show();
+                if (idc == true) {
+                    if (getUserPw.equals("") != true && getUserPwc.equals("") != true) {
+                        if (pw_c != true || pwc_c != true) {
+                            Toast.makeText(ActivityChangePass.this, "비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show();
+                        } else {
+                            newPassword = pw.getText().toString().trim();
+                            user.updatePassword(newPassword).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Log.d(TAG, "User password updated.");
+
+                                        Toast.makeText(ActivityChangePass.this, "비밀번호가 변경되었습니다.", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(ActivityChangePass.this, ActivityLogin.class);
+                                        startActivity(intent);
+                                    }
+                                }
+                            });
+                        }
                     } else {
-                        newPassword = pw.getText().toString().trim();
-                        user.updatePassword(newPassword).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if (task.isSuccessful()) {
-                                    Log.d(TAG, "User password updated.");
-
-                                    Toast.makeText(ActivityChangePass.this, "비밀번호가 변경되었습니다.", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(ActivityChangePass.this, ActivityLogin.class);
-                                    startActivity(intent);
-                                }
-                            }
-                        });
-
-/*
-                        mAuth.createUserWithEmailAndPassword(getUserId, getUserPw).addOnCompleteListener(ActivityChangePass.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    FirebaseUser user = mAuth.getCurrentUser();
-                                    String userId = user.getEmail();
-                                    String uid = user.getUid();
-
-                                    HashMap<Object, String> saveProfile = new HashMap<>();
-                                    saveProfile.put("uid", uid);
-                                    saveProfile.put("id", userId);
-
-                                    mDatabase.child("user").child(uid).setValue(saveProfile);
-
-                                    //가입이 되었으면 로그인 페이지로 --> 수정했으면 로그아웃
-                                    Toast.makeText(ActivityChangePass.this, "비밀번호가 변경되었습니다.", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(ActivityChangePass.this, ActivityLogin.class);
-                                    startActivity(intent);
-                                } else {
-                                    Toast.makeText(ActivityChangePass.this, "이미 존재하는 아이디입니다.", Toast.LENGTH_SHORT).show();
-                                    return;
-                                }
-                            }
-                        });*/
+                        Toast.makeText(ActivityChangePass.this, "공백없이 입력해주세요.", Toast.LENGTH_SHORT).show();
                     }
-
-
                 } else {
-                    Toast.makeText(ActivityChangePass.this, "공백없이 입력해주세요.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ActivityChangePass.this, "이메일을 인증해주세요.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
