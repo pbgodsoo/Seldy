@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.seldy_proj.seldy.R;
 
 import java.io.InputStream;
+import java.nio.ByteBuffer;
 
 public class ActivityProfile extends AppCompatActivity {
 
@@ -76,5 +77,16 @@ public class ActivityProfile extends AppCompatActivity {
             }
         }
     }
+/*
+    @Override
+    public void run() {
+        StorageReference storageRef = storage.getReference();
+
+
+        StorageReference mountainsRef = storageRef.child("mountains.jpg");
+
+        StorageReference mountainImagesRef = storageRef.child("images/mountains.jpg");
+
+    }*/
 
 }

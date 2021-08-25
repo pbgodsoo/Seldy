@@ -77,7 +77,7 @@ public class ActivityRegister extends AppCompatActivity {
         pwc_icon = findViewById(R.id.pwc_check_icon);
         email_icon = findViewById(R.id.email_check_icon);
 
-        signUp = findViewById(R.id.signUp);
+        signUp = findViewById(R.id.change);
         email_check_btn = findViewById(R.id.email_check);
 
         // 이전 아이콘 클릭시 로그인 화면으로

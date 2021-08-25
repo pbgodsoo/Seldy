@@ -1,12 +1,16 @@
 package com.seldy_proj.seldy.acitiviy;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 //import com.example.seldy_nawon.R;
@@ -49,6 +53,7 @@ public class ActivityMain extends AppCompatActivity {
         Button imageButton3 = (Button) findViewById(R.id.btn_inquiry);
         Button imageButton4 = (Button) findViewById(R.id.btn_appver);
         Button imageButton5 = (Button) findViewById(R.id.btn_pass);
+        Button imageButton6 = (Button) findViewById(R.id.btn_withdrawal);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
 
@@ -95,7 +100,45 @@ public class ActivityMain extends AppCompatActivity {
 
             }
         });
+
+        imageButton6.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ActivityWithdrawal.class);
+                startActivity(intent);
+
+            }
+        });
+
+        Button btnQuit = findViewById(R.id.btn_logout);
+        btnQuit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog();
+            }
+        });
     }
 
+
+
+
+    void showDialog() {
+        AlertDialog.Builder msgBuilder = new AlertDialog.Builder(ActivityMain.this)
+                .setTitle("로그아웃")
+                .setMessage("로그아웃 하시겠습니까?")
+                .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("no", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //Toast.makeText(ActivityMain.this, "안 끔", Toast.LENGTH_SHORT).show();
+                    } }); AlertDialog msgDlg = msgBuilder.create();
+        msgDlg.show();
+    }
 
 }

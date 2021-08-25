@@ -29,7 +29,7 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-black"
@@ -47,125 +47,206 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/e7" />
 
-    <LinearLayout
+    <ScrollView
+        android:layout_marginTop="25dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView2"
+        android:layout_gravity="center">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:fontFamily="@font/hancom_gothic_regular"
-            android:text="비밀번호 변경"
-            android:textColor="#000000"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/hancom_gothic_regular"
-            android:text="기존 PW"
-            android:textColor="@color/seldy3"
-            android:textSize="24sp" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/editTextTextPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="@color/seldy3"
-                android:ems="10"
-                android:inputType="textPassword" />
-
-            <ImageButton
-                android:id="@+id/btn_pan1"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="right"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_marginTop="5dp"
-                android:background="@color/seldy2"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/f4" />
-        </FrameLayout>
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/hancom_gothic_regular"
-            android:text="신규 PW"
-            android:textColor="@color/seldy3"
-            android:textSize="24sp" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/editTextTextPassword2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="@color/seldy3"
-                android:ems="10"
-                android:inputType="textPassword" />
+                android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="right"
-                android:layout_margin="5dp"
-                android:background="@color/seldy2"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/f4" />
-        </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/bmjua"
+                    android:text="비밀번호 변경"
+                    android:textAlignment="center"
+                    android:textColor="#484848"
+                    android:textSize="22sp" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/hancom_gothic_regular"
-            android:text="PW 재입력"
-            android:textColor="@color/seldy3"
-            android:textSize="24sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/malangmalangb"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#484848"
+                    android:textSize="20sp"
+                    android:text=""/>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/register_id"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="아이디 (E-mail)"
+                        android:padding="10dp"
+                        android:textColorHint="#BFBFBF"
+                        android:background="@drawable/register_border_radius"
+                        android:textColor="#000"
+                        android:fontFamily="@font/malangmalangb"/>
+                    <Button
+                        android:id="@+id/email_check"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/sign_up_back"
+                        android:textColor="#484848"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bmjua"
+                        android:layout_marginLeft="3dp"
+                        android:text="인증"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/register_border_radius">
+                    <EditText
+                        android:id="@+id/email_check_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:hint="인증코드"
+                        android:textColorHint="#BFBFBF"
+                        android:padding="10dp"
+                        android:fontFamily="@font/malangmalangb"/>
+                    <ImageView
+                        android:id="@+id/email_check_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_weight="5"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/code_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/malangmalangb"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#484848"
+                    android:textSize="15sp"
+                    android:text=""/>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/nickname_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/malangmalangb"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#484848"
+                    android:textSize="15sp"
+                    android:text=""/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/register_border_radius">
 
-            <EditText
-                android:id="@+id/editTextTextPassword3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/seldy3"
-                android:ems="10"
-                android:inputType="textPassword" />
+                    <EditText
+                        android:id="@+id/register_pw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:fontFamily="@font/malangmalangb"
+                        android:hint="새 비밀번호"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#BFBFBF" />
+                    <ImageView
+                        android:id="@+id/pw_check_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_weight="5"
+                        android:layout_gravity="center" />
+                </LinearLayout>
 
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="right"
-                android:layout_margin="5dp"
-                android:background="@color/seldy2"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/f4" />
-        </FrameLayout>
+                <TextView
+                    android:id="@+id/pw_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/malangmalangb"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#484848"
+                    android:textSize="15sp"
+                    android:text=""/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/register_border_radius"
+                    android:layout_marginTop="5dp">
 
-    </LinearLayout>
+                    <EditText
+                        android:id="@+id/register_pwc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:fontFamily="@font/malangmalangb"
+                        android:hint="새 비밀번호 재입력"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="#000"
+                        android:textColorHint="#BFBFBF" />
+                    <ImageView
+                        android:id="@+id/pwc_check_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_weight="5"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <!-- 비밀번호 같은지 확인-->
+                <TextView
+                    android:id="@+id/pwc_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/malangmalangb"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#484848"
+                    android:textSize="15sp"
+                    android:text=""/>
+
+                <Button
+                    android:id="@+id/change"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/sign_up_back"
+                    android:fontFamily="@font/bmjua"
+                    android:text="변경"
+                    android:textColor="#484848" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>
