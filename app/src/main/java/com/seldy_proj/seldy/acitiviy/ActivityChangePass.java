@@ -113,6 +113,9 @@ public class ActivityChangePass extends AppCompatActivity {
                                         Log.d(TAG, "User password updated.");
 
                                         Toast.makeText(ActivityChangePass.this, "비밀번호가 변경되었습니다.", Toast.LENGTH_SHORT).show();
+                                        //로그아웃으로 바꿔야함
+                                        
+                                        mAuth.signOut();
                                         Intent intent = new Intent(ActivityChangePass.this, ActivityLogin.class);
                                         startActivity(intent);
                                     }
