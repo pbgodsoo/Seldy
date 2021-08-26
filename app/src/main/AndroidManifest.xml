@@ -31,6 +31,7 @@
         <activity android:name="com.seldy_proj.seldy.acitiviy.ActivityAppver"/>
         <activity android:name="com.seldy_proj.seldy.acitiviy.ActivityChangePass"/>
         <activity android:name="com.seldy_proj.seldy.acitiviy.ActivityWithdrawal"/>
+        <activity android:name="com.seldy_proj.seldy.acitiviy.ActivityWithdrawal2"/>
     </application>
 
 </manifest>
