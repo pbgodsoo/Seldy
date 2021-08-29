@@ -77,16 +77,5 @@ public class ActivityProfile extends AppCompatActivity {
             }
         }
     }
-/*
-    @Override
-    public void run() {
-        StorageReference storageRef = storage.getReference();
-
-
-        StorageReference mountainsRef = storageRef.child("mountains.jpg");
-
-        StorageReference mountainImagesRef = storageRef.child("images/mountains.jpg");
-
-    }*/
 
 }

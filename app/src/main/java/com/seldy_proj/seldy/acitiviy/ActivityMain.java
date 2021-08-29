@@ -19,7 +19,6 @@ import com.seldy_proj.seldy.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ActivityMain extends AppCompatActivity {
-    Button signout;
     FirebaseAuth mAuth;
     Context mContext;
     @Override
@@ -29,22 +28,6 @@ public class ActivityMain extends AppCompatActivity {
 
         mContext = this;
         mAuth = FirebaseAuth.getInstance();
-
-        signout = findViewById(R.id.signout);
-
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAuth.signOut();
-                PreferenceManager.removeKey(mContext, "AutoLogin");
-                PreferenceManager.removeKey(mContext, "Id");
-                PreferenceManager.removeKey(mContext,"Pw");
-
-                Intent intent = new Intent(ActivityMain.this, ActivityLogin.class);
-                startActivity(intent);
-                finish();
-            }
-        });
 
         setContentView(R.layout.activity_main);
 
@@ -130,13 +113,20 @@ public class ActivityMain extends AppCompatActivity {
                 .setPositiveButton("yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        mAuth.signOut();
+                        PreferenceManager.removeKey(mContext, "AutoLogin");
+                        PreferenceManager.removeKey(mContext, "Id");
+                        PreferenceManager.removeKey(mContext,"Pw");
+
+                        Intent intent = new Intent(ActivityMain.this, ActivityLogin.class);
+                        startActivity(intent);
                         finish();
                     }
                 })
                 .setNegativeButton("no", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        //Toast.makeText(ActivityMain.this, "안 끔", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(ActivityMain.this, "로그아웃 안함", Toast.LENGTH_SHORT).show();
                     } }); AlertDialog msgDlg = msgBuilder.create();
         msgDlg.show();
     }

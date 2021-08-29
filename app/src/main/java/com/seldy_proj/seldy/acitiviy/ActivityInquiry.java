@@ -16,7 +16,7 @@ public class ActivityInquiry extends AppCompatActivity {
         setContentView(R.layout.activity_inquiry);
 
 
-        ImageButton button = (ImageButton) findViewById(R.id.btn_pan1);
+        ImageButton button = (ImageButton) findViewById(R.id.btn_back);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

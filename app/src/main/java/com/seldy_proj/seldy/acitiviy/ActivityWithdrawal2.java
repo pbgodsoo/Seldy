@@ -37,10 +37,10 @@ import static android.content.ContentValues.TAG;
 
 public class ActivityWithdrawal2 extends AppCompatActivity {
 
-    TextView code_check;
-    EditText id, email_check_code;
-    ImageView email_icon;
-    Button withdrawal_btn, email_check_btn;
+    TextView codeCheck;
+    EditText id, emailCheckCode;
+    ImageView emailIcon;
+    Button withdrawalBtn, emailCheckBtn;
     String code = null;
     boolean idc = false;
     private DatabaseReference mDatabase;
@@ -69,19 +69,19 @@ public class ActivityWithdrawal2 extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         id = findViewById(R.id.register_id);
-        email_check_code = findViewById(R.id.email_check_code);
+        emailCheckCode = findViewById(R.id.email_check_code);
 
-        code_check = findViewById(R.id.code_check);
+        codeCheck = findViewById(R.id.code_check);
 
-        email_icon = findViewById(R.id.email_check_icon);
+        emailIcon = findViewById(R.id.email_check_icon);
 
-        withdrawal_btn = findViewById(R.id.withdrawal);
-        email_check_btn = findViewById(R.id.email_check);
+        withdrawalBtn = findViewById(R.id.withdrawal);
+        emailCheckBtn = findViewById(R.id.email_check);
 
 
 
         //회원 탈퇴
-        withdrawal_btn.setOnClickListener(new View.OnClickListener() {
+        withdrawalBtn.setOnClickListener(new View.OnClickListener() {
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             @Override
             public void onClick(View v) {
@@ -108,7 +108,7 @@ public class ActivityWithdrawal2 extends AppCompatActivity {
 
 
         //이메일 인증
-        email_check_btn.setOnClickListener(new View.OnClickListener() {
+        emailCheckBtn.setOnClickListener(new View.OnClickListener() {
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
             @Override
@@ -158,7 +158,7 @@ public class ActivityWithdrawal2 extends AppCompatActivity {
 
 
         // 인증코드 확인
-        email_check_code.addTextChangedListener(new TextWatcher() {
+        emailCheckCode.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -166,15 +166,15 @@ public class ActivityWithdrawal2 extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (email_check_code.getText().toString().equals(code)) {
-                    email_icon.setImageResource(R.drawable.success_icon);
-                    code_check.setTextColor(Color.parseColor("#484848"));
-                    code_check.setText("일치하는 코드입니다.");
+                if (emailCheckCode.getText().toString().equals(code)) {
+                    emailIcon.setImageResource(R.drawable.success_icon);
+                    codeCheck.setTextColor(Color.parseColor("#484848"));
+                    codeCheck.setText("일치하는 코드입니다.");
                     idc = true;
                 } else {
-                    email_icon.setImageResource(R.drawable.fail_icon);
-                    code_check.setTextColor(Color.parseColor("#FF7E7E"));
-                    code_check.setText("일치하지 않는 코드입니다.");
+                    emailIcon.setImageResource(R.drawable.fail_icon);
+                    codeCheck.setTextColor(Color.parseColor("#FF7E7E"));
+                    codeCheck.setText("일치하지 않는 코드입니다.");
                 }
             }
 

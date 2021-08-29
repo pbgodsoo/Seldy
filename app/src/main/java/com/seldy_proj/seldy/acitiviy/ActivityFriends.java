@@ -15,7 +15,7 @@ public class ActivityFriends extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friends);
 
-        ImageButton button = (ImageButton) findViewById(R.id.btn_pan1);
+        ImageButton button = (ImageButton) findViewById(R.id.btn_back);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
