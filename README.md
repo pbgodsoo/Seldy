@@ -16,6 +16,8 @@
 ### 메인 페이지
 
 ![image](https://github.com/pbgodsoo/Seldy/assets/84000206/5bc56c2a-7994-49ae-927c-04cdefe85461)
+![image](https://github.com/pbgodsoo/Seldy/assets/84000206/f549ac3c-b62e-4a87-bdf7-6fb252d76a57)
+
 
 ### SNS로 공유된 일기 및 댓글
 
